@@ -78,5 +78,4 @@ const runTests = async () => {
     process.exit(1);
   }
 };
-
 runTests();

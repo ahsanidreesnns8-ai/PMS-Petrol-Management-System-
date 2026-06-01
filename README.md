@@ -24,25 +24,8 @@ petrol-pump-management-system/
 │       ├── pages/
 │       ├── routes/
 │       ├── services/
-│       ├── hooks/
-│       ├── context/
-│       ├── store/
-│       ├── utils/
-│       ├── styles/
-│       └── config/
-└── database/
-    └── schema.sql    # MySQL schema + sample data
-```
+anywhere).
 
-## Prerequisites
-
-- **Node.js** 18+ ([https://nodejs.org](https://nodejs.org))
-- **MySQL** 8+ ([https://dev.mysql.com/downloads](https://dev.mysql.com/downloads))
-- **VS Code** (recommended editor)
-
-## Step 1: Create Project on Your PC
-
-1. Open File Explorer and go to `C:\Users\it.care\petrol-pump-management-system` (or copy the folder anywhere).
 2. Open the folder in VS Code: **File → Open Folder**.
 
 ## Step 2: Setup MySQL Database
