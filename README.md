@@ -137,3 +137,10 @@ npm test
 - Frontend: React 18, Vite, Tailwind CSS, Context API, Axios, Chart.js
 - Backend: Express, Sequelize, JWT, bcrypt, multer, express-validator, Swagger
 - Database: MySQL
+
+## Author 
+M. Ahsan Idrees
+2025-CYS-112
+
+
+
