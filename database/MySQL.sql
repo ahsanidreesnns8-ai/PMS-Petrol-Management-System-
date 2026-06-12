@@ -4,23 +4,10 @@ CREATE DATABASE IF NOT EXISTS petrol_pump_db
 
 USE petrol_pump_db;
 
-SELECT * FROM petrol_pump_db;
-
+-- Check database and user entry
 SELECT * FROM users WHERE email = 'admin@petrolpump.com';
 
-UPDATE users 
-SET password = '$2b$10$/HgjOXkceMeKO1HAhx1da...V2egjTNPsfQT1DLtRDgpbp25eBsv.' 
-WHERE email = 'admin@petrolpump.com';
-
-UPDATE users 
-SET password = '<NEW_HASH>' 
-WHERE email = 'admin@petrolpump.com';
-
-
-USE petrol_pump_db;
-
+-- Update password with the correct bcrypt hash
 UPDATE users
 SET password = '$2b$10$/HgjOXkceMeKO1HAhx1da...V2egjTNPsfQT1DLtRDgpbp25eBsv.'
 WHERE email = 'admin@petrolpump.com';
-
-
