@@ -29,15 +29,11 @@ export default function Sidebar({ open, onClose }) {
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden no-print" onClick={onClose} />
       )}
       <aside
-        className={`sidebar-panel fixed lg:static inset-y-0 left-0 z-50 w-72 transform transition-transform duration-300 lg:translate-x-0 no-print ${
-          open ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`sidebar-panel fixed lg:static inset-y-0 left-0 z-50 w-72 transform transition-transform duration-300 lg:translate-x-0 no-print ${open ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center gap-3">
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 text-2xl shadow-lg shadow-orange-500/30">
-              ⛽
-            </span>
             <div>
               <h1 className="text-lg font-bold text-white tracking-tight">{site.pumpName}</h1>
               <p className="text-xs text-slate-400">{site.tagline}</p>
@@ -52,8 +48,7 @@ export default function Sidebar({ open, onClose }) {
               to={item.to}
               onClick={onClose}
               className={({ isActive }) =>
-                `nav-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
-                  isActive ? 'nav-link-active' : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                `nav-link flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'nav-link-active' : 'text-slate-300 hover:bg-white/5 hover:text-white'
                 }`
               }
             >

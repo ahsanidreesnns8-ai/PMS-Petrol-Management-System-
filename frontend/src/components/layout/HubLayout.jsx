@@ -18,7 +18,7 @@ export default function HubLayout() {
             onClick={() => navigate('/hub')}
             className="flex items-center gap-2 text-amber-400 font-extrabold text-xl hover:text-amber-300"
           >
-            <span className="text-2xl">⛽</span> {site.pumpName}
+            {site.pumpName}
           </button>
           <div className="flex items-center gap-3">
             <span className="hidden sm:inline text-sm text-slate-300">{user?.name}</span>

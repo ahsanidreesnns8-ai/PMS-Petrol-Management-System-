@@ -4,15 +4,15 @@ import { FEATURE_GUIDES } from '../config/featureGuides';
 import FeatureGuide from '../components/ui/FeatureGuide';
 
 const MENU = [
-  { path: '/dashboard', icon: '📊', title: 'Dashboard', desc: 'Sales, revenue & stock overview', color: 'from-blue-500 to-indigo-600' },
-  { path: '/billing', icon: '🧾', title: 'Billing & PDF', desc: 'Generate bill & download receipt', color: 'from-amber-500 to-orange-600' },
-  { path: '/vehicles', icon: '🚗', title: 'Vehicle History', desc: 'Which car filled fuel on a date', color: 'from-emerald-500 to-teal-600' },
-  { path: '/fuels', icon: '⛽', title: 'Fuel Stock', desc: 'Petrol, diesel & low stock alerts', color: 'from-yellow-500 to-amber-600' },
-  { path: '/employees', icon: '👥', title: 'Employees', desc: 'Attendance & salary history', color: 'from-violet-500 to-purple-600' },
-  { path: '/branches', icon: '🏢', title: 'JUTT GM Branches', desc: 'Find nearest pump by city & GPS', color: 'from-rose-500 to-pink-600' },
-  { path: '/reports', icon: '📈', title: 'Reports', desc: 'Daily, monthly & revenue reports', color: 'from-cyan-500 to-blue-600' },
-  { path: '/location', icon: '📍', title: 'GPS Location', desc: 'Map & directions to station', color: 'from-slate-600 to-slate-800' },
-  { path: '/settings', icon: '⚙️', title: 'Settings', desc: 'Profile, social links & theme', color: 'from-gray-500 to-gray-700' },
+  { path: '/dashboard', title: 'Dashboard', desc: 'Sales, revenue & stock overview', color: 'from-blue-500 to-indigo-600' },
+  { path: '/billing', title: 'Billing & PDF', desc: 'Generate bill & download receipt', color: 'from-amber-500 to-orange-600' },
+  { path: '/vehicles', title: 'Vehicle History', desc: 'Which car filled fuel on a date', color: 'from-emerald-500 to-teal-600' },
+  { path: '/fuels', title: 'Fuel Stock', desc: 'Petrol, diesel & low stock alerts', color: 'from-yellow-500 to-amber-600' },
+  { path: '/employees', title: 'Employees', desc: 'Attendance & salary history', color: 'from-violet-500 to-purple-600' },
+  { path: '/branches', title: 'JUTT GM Branches', desc: 'Find nearest pump by city & GPS', color: 'from-rose-500 to-pink-600' },
+  { path: '/reports', title: 'Reports', desc: 'Daily, monthly & revenue reports', color: 'from-cyan-500 to-blue-600' },
+  { path: '/location', title: 'GPS Location', desc: 'Map & directions to station', color: 'from-slate-600 to-slate-800' },
+  { path: '/settings', title: 'Settings', desc: 'Profile, social links & theme', color: 'from-gray-500 to-gray-700' },
 ];
 
 export default function HubPage() {
@@ -38,8 +38,7 @@ export default function HubPage() {
             className="group text-left rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-white/10"
           >
             <div className={`bg-gradient-to-br ${item.color} p-6 text-white`}>
-              <span className="text-4xl">{item.icon}</span>
-              <h2 className="text-xl font-bold mt-3">{item.title}</h2>
+              <h2 className="text-xl font-bold">{item.title}</h2>
               <p className="text-sm text-white/80 mt-1">{item.desc}</p>
               <span className="inline-block mt-4 text-xs font-semibold bg-white/20 px-3 py-1 rounded-full group-hover:bg-white/30">
                 Open →
