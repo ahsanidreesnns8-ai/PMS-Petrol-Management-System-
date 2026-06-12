@@ -24,6 +24,7 @@ if (-not (Test-Path $backendEnv)) {
 $frontendEnv = Join-Path $Root "frontend\.env"
 if (-not (Test-Path $frontendEnv)) {
     Copy-Item (Join-Path $Root "frontend\.env.example") $frontendEnv
+    Write-Host "Created frontend\.env" -ForegroundColor Yellow
 }
 
 # Install dependencies
