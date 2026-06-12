@@ -11,11 +11,11 @@ const branchRoutes = require('./branch.routes');
 
 router.use('/auth', authRoutes);
 router.use('/branches', branchRoutes);
-router.use('/users', settingsRoutes);
+router.use('/users', settingsRoutes);   // keep this for user-specific settings
 router.use('/fuels', fuelRoutes);
 router.use('/billing', billingRoutes);
 router.use('/employees', employeeRoutes);
 router.use('/reports', reportRoutes);
-router.use('/settings', settingsRoutes);
+// removed duplicate '/settings' since '/users' already points to settingsRoutes
 
 module.exports = router;
