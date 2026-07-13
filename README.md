@@ -1,142 +1,225 @@
-# Petrol Pump Management System
+# ⛽ Petrol Pump Management System
 
-Full-stack petrol pump management application built with **React + Vite** (frontend) and **Node.js + Express** (backend) using **MVC architecture** and **MySQL**.
+<p align="center">
+  <img src="https://via.placeholder.com/1200x350?text=Petrol+Pump+Management+System" alt="Project Banner" width="100%">
+</p>
 
-## Project Structure
+<p align="center">
+  <strong>A Full-Stack Petrol Pump Management System built with React, Node.js, Express, and MySQL.</strong>
+</p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react">
+  <img src="https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=node.js">
+  <img src="https://img.shields.io/badge/Framework-Express-000000?style=for-the-badge&logo=express">
+  <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql">
+  <img src="https://img.shields.io/badge/Architecture-MVC-orange?style=for-the-badge">
+</p>
+
+---
+
+# 📖 Overview
+
+The **Petrol Pump Management System** is a full-stack web application designed to simplify and automate petrol pump operations. It helps manage employees, fuel inventory, customers, sales, vehicles, and daily transactions through a modern dashboard.
+
+The project follows the **MVC (Model-View-Controller)** architecture to keep the code clean, modular, and scalable.
+
+---
+
+# ✨ Features
+
+- 🔐 Secure User Authentication
+- 👨‍💼 Employee Management
+- ⛽ Fuel Stock Management
+- 🚗 Vehicle Record Management
+- 💰 Sales & Billing System
+- 📊 Dashboard with Statistics
+- 📅 Daily Transaction Records
+- 📈 Fuel Purchase History
+- 📝 Customer Management
+- 🔍 Search & Filter Records
+- 📱 Responsive User Interface
+
+---
+
+# 🛠 Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+
+- Node.js
+- Express.js
+
+### Database
+
+- MySQL
+
+### Architecture
+
+- MVC (Model-View-Controller)
+
+---
+
+# 📂 Project Structure
+
+```text
+Petrol-Pump-Management-System/
+│
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   ├── app.js
+│   └── package.json
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.jsx
+│   ├── vite.config.js
+│   └── package.json
+│
+├── database/
+│   └── petrol_pump.sql
+│
+├── README.md
+└── .gitignore
 ```
-petrol-pump-management-system/
-├── backend/          # Node.js + Express API (MVC)
-│   ├── config/       # Database, Swagger, Multer
-│   ├── models/       # Sequelize models
-│   ├── controllers/  # Request handlers
-│   ├── services/     # Business logic
-│   ├── routes/       # REST API routes
-│   ├── middlewares/  # Auth, validation, errors
-│   ├── validations/  # express-validator rules
-│   ├── utils/        # Helpers, logger, seed
-│   ├── uploads/      # Uploaded files
-│   ├── docs/         # API documentation
-│   └── tests/        # Basic API tests
-├── frontend/         # React + Vite UI
-│   └── src/
-│       ├── components/
-│       ├── pages/
-│       ├── routes/
-│       ├── services/
-anywhere).
 
-2. Open the folder in VS Code: **File → Open Folder**.
+---
 
-## Step 2: Setup MySQL Database
+# ⚙️ Installation
 
-1. Start MySQL service (XAMPP/WAMP or MySQL Workbench).
-2. Open MySQL command line or Workbench and run:
+## 1️⃣ Clone the Repository
 
-```sql
-source C:/Users/it.care/petrol-pump-management-system/database/schema.sql
+```bash
+git clone https://github.com/ahsanidreesnns8-ai/Petrol-Pump-Management-System.git
 ```
 
-Or import `database/schema.sql` via MySQL Workbench.
+```bash
+cd Petrol-Pump-Management-System
+```
 
-## Step 3: Backend Setup
+---
+
+## 2️⃣ Install Backend Dependencies
 
 ```bash
 cd backend
-copy .env.example .env
+npm install
 ```
 
-Edit `.env` with your MySQL password:
+---
 
-```
-DB_PASSWORD=your_mysql_password
-JWT_SECRET=your_secret_key_here
-```
-
-Install and run:
+## 3️⃣ Install Frontend Dependencies
 
 ```bash
+cd ../frontend
 npm install
-npm run seed
-npm run dev
 ```
 
-Backend runs at: **http://localhost:5000**  
-Swagger docs: **http://localhost:5000/api-docs**
+---
 
-### Demo Login (after seed)
+## 4️⃣ Configure Database
 
-| Role  | Email                   | Password  |
-|-------|-------------------------|-----------|
-| Admin | admin@petrolpump.com    | admin123  |
-| Staff | staff@petrolpump.com    | staff123  |
+- Install MySQL.
+- Create a new database.
+- Import the SQL file located in the `database` folder.
+- Update your database credentials in the backend configuration.
 
-## Step 4: Frontend Setup
+---
 
-Open a **new terminal**:
+## 5️⃣ Start Backend
+
+```bash
+cd backend
+npm start
+```
+
+---
+
+## 6️⃣ Start Frontend
 
 ```bash
 cd frontend
-copy .env.example .env
-npm install
 npm run dev
 ```
 
-Frontend runs at: **http://localhost:5173**
+---
 
-## API Endpoints
+# 📊 Modules
 
-| Module    | Base URL           |
-|-----------|--------------------|
-| Auth      | `/api/auth`        |
-| Users     | `/api/users`       |
-| Fuels     | `/api/fuels`       |
-| Billing   | `/api/billing`     |
-| Employees | `/api/employees`   |
-| Reports   | `/api/reports`     |
-| Settings  | `/api/settings`    |
+- Dashboard
+- Authentication
+- Employee Management
+- Customer Management
+- Fuel Inventory
+- Vehicle Records
+- Sales Management
+- Billing System
+- Reports
+- Transaction History
 
-## Features
+---
 
-- JWT authentication with Admin/User roles
-- Dashboard with charts and fuel analytics
-- Fuel stock management with low-stock alerts
-- Billing with GST and printable receipts
-- Employee, attendance, and salary records
-- Daily/monthly/revenue reports
-- Profile, password, and theme settings
+# 🚀 Future Improvements
 
-## Run Tests
+- Online Payment Integration
+- QR Code Billing
+- SMS Notifications
+- Fuel Price Management
+- Analytics Dashboard
+- Mobile Application
+- Loyalty Rewards Program
+- Multi-Branch Management
 
-```bash
-cd backend
-npm test
-```
+---
 
-(Server must be running for API tests.)
 
-## Viva / Presentation Tips
+# 👨‍💻 Author
 
-1. Explain **MVC**: Models (Sequelize), Views (React pages), Controllers (Express).
-2. Show **Swagger** at `/api-docs`.
-3. Demo **admin login** → add fuel → generate bill → print receipt.
-4. Show **low stock alert** on dashboard when quantity is below threshold.
-5. Explain **JWT** flow: login → token in localStorage → Axios interceptor.
+**Muhammad Ahsan Idrees**
 
-## Troubleshooting
+Cybersecurity Student | Full Stack Developer
 
-| Issue | Solution |
-|-------|----------|
-| MySQL connection error | Check `.env` DB credentials; ensure MySQL is running |
-| CORS error | Backend `FRONTEND_URL` or use Vite proxy (already configured) |
-| Empty dashboard | Run `npm run seed` in backend |
-| Port in use | Change `PORT` in backend `.env` or Vite port in `vite.config.js` |
+🔗 LinkedIn
 
-## Tech Stack
+https://www.linkedin.com/in/m-ahsan-idrees-664126329
 
-- Frontend: React 18, Vite, Tailwind CSS, Context API, Axios, Chart.js
-- Backend: Express, Sequelize, JWT, bcrypt, multer, express-validator, Swagger
-- Database: MySQL
+💻 GitHub
 
-## Author 
-M. Ahsan Idrees
+https://github.com/ahsanidreesnns8-ai
+
+---
+
+# 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+Feel free to fork this repository and submit a Pull Request.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, don't forget to **Star ⭐ the repository** on GitHub.
+
+---
+
+<p align="center">
+Made with ❤️ by <b>Muhammad Ahsan Idrees</b>
+</p>
