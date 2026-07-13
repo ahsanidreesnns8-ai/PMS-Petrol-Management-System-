@@ -1,225 +1,322 @@
+<div align="center">
+
 # ⛽ Petrol Pump Management System
 
-<p align="center">
-  <img src="https://via.placeholder.com/1200x350?text=Petrol+Pump+Management+System" alt="Project Banner" width="100%">
-</p>
+**A full-stack, role-based management platform for petrol pump operations — fuel stock, billing, employees, and reporting, all in one place.**
 
-<p align="center">
-  <strong>A Full-Stack Petrol Pump Management System built with React, Node.js, Express, and MySQL.</strong>
-</p>
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express&logoColor=white)](https://expressjs.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](#-license)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react">
-  <img src="https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=node.js">
-  <img src="https://img.shields.io/badge/Framework-Express-000000?style=for-the-badge&logo=express">
-  <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql">
-  <img src="https://img.shields.io/badge/Architecture-MVC-orange?style=for-the-badge">
-</p>
+[Overview](#-overview) •
+[Features](#-features) •
+[Tech Stack](#-tech-stack) •
+[Getting Started](#-getting-started) •
+[API Reference](#-api-reference) •
+[Troubleshooting](#-troubleshooting) •
+[Presentation Guide](#-viva--presentation-guide)
 
----
-
-# 📖 Overview
-
-The **Petrol Pump Management System** is a full-stack web application designed to simplify and automate petrol pump operations. It helps manage employees, fuel inventory, customers, sales, vehicles, and daily transactions through a modern dashboard.
-
-The project follows the **MVC (Model-View-Controller)** architecture to keep the code clean, modular, and scalable.
+</div>
 
 ---
 
-# ✨ Features
+## 📖 Overview
 
-- 🔐 Secure User Authentication
-- 👨‍💼 Employee Management
-- ⛽ Fuel Stock Management
-- 🚗 Vehicle Record Management
-- 💰 Sales & Billing System
-- 📊 Dashboard with Statistics
-- 📅 Daily Transaction Records
-- 📈 Fuel Purchase History
-- 📝 Customer Management
-- 🔍 Search & Filter Records
-- 📱 Responsive User Interface
+The **Petrol Pump Management System** is a complete web application for digitizing the day-to-day operations of a fuel station. It replaces manual registers with a secure, role-based dashboard that handles fuel stock, customer billing, staff records, and business reporting.
+
+Built with a clean **MVC architecture** on the backend and a modern **React + Vite** frontend, the project is designed to be easy to read, easy to extend, and easy to demo.
+
+|                  |                                                              |
+|------------------|--------------------------------------------------------------|
+| **Frontend**     | React 18 + Vite, running on `http://localhost:5173`          |
+| **Backend**      | Node.js + Express (MVC), running on `http://localhost:5000`  |
+| **Database**     | MySQL                                                        |
+| **API Docs**     | Swagger UI at `http://localhost:5000/api-docs`               |
+| **Auth**         | JWT-based, with Admin and Staff roles                        |
 
 ---
 
-# 🛠 Tech Stack
+## ✨ Features
 
-### Frontend
+### 🔐 Authentication & Access Control
+- Secure JWT-based login with token stored client-side
+- Role-based access control — **Admin** and **Staff** views
+- Axios interceptor for automatic token attachment and refresh handling
 
-- React.js
+### 📊 Dashboard & Analytics
+- At-a-glance overview of sales, stock, and revenue
+- Interactive charts (Chart.js) for fuel consumption and revenue trends
+- Real-time **low-stock alerts** when fuel quantity drops below threshold
+
+### ⛽ Fuel Stock Management
+- Add, update, and track multiple fuel types (Petrol, Diesel, CNG, etc.)
+- Automatic stock deduction on billing
+- Configurable low-stock threshold per fuel type
+
+### 🧾 Billing & Invoicing
+- GST-compliant bill generation
+- Printable, professional receipts
+- Bill history with search and filters
+
+### 👥 Employee Management
+- Employee profiles with role and shift assignment
+- Attendance tracking
+- Salary and payroll records
+
+### 📈 Reports
+- Daily, monthly, and custom-range revenue reports
+- Exportable summaries for accounting and audits
+
+### ⚙️ Settings
+- Profile management and password updates
+- Light/dark theme toggle
+- Business/station configuration options
+
+---
+
+## 🛠 Tech Stack
+
+<table>
+<tr>
+<td valign="top" width="50%">
+
+**Frontend**
+- React 18
 - Vite
-- HTML5
-- CSS3
-- JavaScript
+- Tailwind CSS
+- Context API (state management)
+- Axios (HTTP client)
+- Chart.js (data visualization)
 
-### Backend
+</td>
+<td valign="top" width="50%">
 
-- Node.js
-- Express.js
-
-### Database
-
+**Backend**
+- Node.js + Express (MVC pattern)
+- Sequelize ORM
 - MySQL
+- JWT (`jsonwebtoken`) for authentication
+- bcrypt for password hashing
+- Multer for file uploads
+- express-validator for input validation
+- Swagger for API documentation
 
-### Architecture
-
-- MVC (Model-View-Controller)
+</td>
+</tr>
+</table>
 
 ---
 
-# 📂 Project Structure
+## 📁 Project Structure
 
-```text
-Petrol-Pump-Management-System/
+```
+petrol-pump-management-system/
+├── backend/                # Node.js + Express API (MVC)
+│   ├── config/              # Database, Swagger, and Multer configuration
+│   ├── models/               # Sequelize models
+│   ├── controllers/          # Request handlers
+│   ├── services/              # Business logic
+│   ├── routes/                # REST API route definitions
+│   ├── middlewares/           # Auth, validation, and error handling
+│   ├── validations/            # express-validator rule sets
+│   ├── utils/                  # Helpers, logger, and DB seeding scripts
+│   ├── uploads/                 # Uploaded files (e.g., receipts, avatars)
+│   ├── docs/                     # API documentation
+│   └── tests/                     # Basic API tests
 │
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   ├── app.js
-│   └── package.json
+├── frontend/                # React + Vite UI
+│   └── src/
+│       ├── components/         # Reusable UI components
+│       ├── pages/               # Route-level page components
+│       ├── routes/                # App routing configuration
+│       └── services/               # API service layer (Axios calls)
 │
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── App.jsx
-│   ├── vite.config.js
-│   └── package.json
-│
-├── database/
-│   └── petrol_pump.sql
-│
-├── README.md
-└── .gitignore
+└── database/
+    └── schema.sql            # MySQL schema and seed structure
 ```
 
 ---
 
-# ⚙️ Installation
+## 🚀 Getting Started
 
-## 1️⃣ Clone the Repository
+### Prerequisites
+
+Make sure you have the following installed before you begin:
+
+| Requirement | Version    | Notes                                   |
+|--------------|-----------|------------------------------------------|
+| Node.js      | 18+       | [Download](https://nodejs.org/)          |
+| MySQL        | 8.x       | Via XAMPP, WAMP, or MySQL Workbench      |
+| Git          | Any       | To clone the repository                  |
+
+### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/ahsanidreesnns8-ai/Petrol-Pump-Management-System.git
+git clone https://github.com/<your-username>/petrol-pump-management-system.git
+cd petrol-pump-management-system
 ```
 
-```bash
-cd Petrol-Pump-Management-System
-```
+Open the folder in your editor of choice (e.g., **File → Open Folder** in VS Code).
 
----
+### Step 2 — Set Up the Database
 
-## 2️⃣ Install Backend Dependencies
+1. Start your MySQL service (via XAMPP, WAMP, or MySQL Workbench).
+2. Import the schema:
+
+   **Option A — Command line:**
+   ```sql
+   source /path/to/petrol-pump-management-system/database/schema.sql
+   ```
+
+   **Option B — MySQL Workbench:**
+   Use **Server → Data Import** and select `database/schema.sql`.
+
+### Step 3 — Backend Setup
 
 ```bash
 cd backend
+cp .env.example .env      # On Windows: copy .env.example .env
+```
+
+Edit `.env` with your local configuration:
+
+```env
+DB_PASSWORD=your_mysql_password
+JWT_SECRET=your_secret_key_here
+```
+
+Install dependencies, seed the database, and start the server:
+
+```bash
 npm install
-```
-
----
-
-## 3️⃣ Install Frontend Dependencies
-
-```bash
-cd ../frontend
-npm install
-```
-
----
-
-## 4️⃣ Configure Database
-
-- Install MySQL.
-- Create a new database.
-- Import the SQL file located in the `database` folder.
-- Update your database credentials in the backend configuration.
-
----
-
-## 5️⃣ Start Backend
-
-```bash
-cd backend
-npm start
-```
-
----
-
-## 6️⃣ Start Frontend
-
-```bash
-cd frontend
+npm run seed
 npm run dev
 ```
 
----
+✅ Backend running at: **http://localhost:5000**
+✅ Swagger API docs at: **http://localhost:5000/api-docs**
 
-# 📊 Modules
+#### Demo Login Credentials (after seeding)
 
-- Dashboard
-- Authentication
-- Employee Management
-- Customer Management
-- Fuel Inventory
-- Vehicle Records
-- Sales Management
-- Billing System
-- Reports
-- Transaction History
+| Role  | Email                 | Password  |
+|-------|-----------------------|-----------|
+| Admin | admin@petrolpump.com  | admin123  |
+| Staff | staff@petrolpump.com  | staff123  |
 
----
+> ⚠️ These are demo credentials for local/testing use only. Change them before deploying to production.
 
-# 🚀 Future Improvements
+### Step 4 — Frontend Setup
 
-- Online Payment Integration
-- QR Code Billing
-- SMS Notifications
-- Fuel Price Management
-- Analytics Dashboard
-- Mobile Application
-- Loyalty Rewards Program
-- Multi-Branch Management
+Open a **new terminal window**, then:
+
+```bash
+cd frontend
+cp .env.example .env      # On Windows: copy .env.example .env
+npm install
+npm run dev
+```
+
+✅ Frontend running at: **http://localhost:5173**
 
 ---
 
+## 📡 API Reference
 
-# 👨‍💻 Author
+Full interactive documentation is available via Swagger at `/api-docs` once the backend is running. Base routes:
 
-**Muhammad Ahsan Idrees**
-
-Cybersecurity Student | Full Stack Developer
-
-🔗 LinkedIn
-
-https://www.linkedin.com/in/m-ahsan-idrees-664126329
-
-💻 GitHub
-
-https://github.com/ahsanidreesnns8-ai
-
----
-
-# 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome.
-
-Feel free to fork this repository and submit a Pull Request.
+| Module        | Base URL           | Description                                  |
+|---------------|--------------------|-----------------------------------------------|
+| Auth          | `/api/auth`        | Login, token refresh, session management      |
+| Users         | `/api/users`       | User accounts and role management             |
+| Fuels         | `/api/fuels`       | Fuel types, stock levels, thresholds          |
+| Billing       | `/api/billing`     | Bill generation and history                   |
+| Employees     | `/api/employees`   | Employee profiles, attendance, salary         |
+| Reports       | `/api/reports`     | Daily/monthly/custom revenue reports          |
+| Settings      | `/api/settings`    | Profile, password, and theme configuration    |
 
 ---
 
-# ⭐ Support
+## ✅ Running Tests
 
-If you found this project helpful, don't forget to **Star ⭐ the repository** on GitHub.
+```bash
+cd backend
+npm test
+```
+
+> ℹ️ The backend server must be running for the API tests to pass, since they make live requests against local endpoints.
 
 ---
 
-<p align="center">
-Made with ❤️ by <b>Muhammad Ahsan Idrees</b>
-</p>
+## 🎓 Viva / Presentation Guide
+
+A quick walkthrough script for demos, vivas, or evaluations:
+
+1. **Explain the architecture** — Models (Sequelize), Views (React pages), Controllers (Express route handlers).
+2. **Show Swagger docs** at `/api-docs` to demonstrate documented, testable endpoints.
+3. **Live demo flow:**
+   - Log in as Admin
+   - Add a new fuel entry / update stock
+   - Generate a bill
+   - Print the receipt
+4. **Show the low-stock alert** on the dashboard by dropping a fuel quantity below its threshold.
+5. **Explain the JWT flow:**
+   - User logs in → server issues a JWT
+   - Token is stored client-side (localStorage)
+   - Axios interceptor attaches the token to every subsequent request
+   - Protected routes verify the token via middleware before granting access
+
+---
+
+## 🩺 Troubleshooting
+
+| Issue                     | Solution                                                                 |
+|----------------------------|--------------------------------------------------------------------------|
+| MySQL connection error     | Check your `.env` DB credentials and confirm MySQL is running            |
+| CORS error                 | Set `FRONTEND_URL` in backend `.env`, or rely on the pre-configured Vite proxy |
+| Empty dashboard            | Run `npm run seed` inside the `backend` directory                        |
+| Port already in use        | Change `PORT` in backend `.env`, or update the Vite dev server port in `vite.config.js` |
+| 401 Unauthorized on API calls | Ensure you're logged in and the JWT token hasn't expired               |
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Multi-station / multi-branch support
+- [ ] SMS/email notifications for low stock
+- [ ] Role-based dashboard widgets
+- [ ] Export reports to PDF/Excel
+- [ ] Dockerized deployment setup
+
+*(Contributions and suggestions for this roadmap are welcome!)*
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m "Add your feature"`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — feel free to use, modify, and distribute it with attribution.
+
+---
+
+## 👤 Author
+
+**M. Ahsan Idrees**
+
+<div align="center">
+
+If this project helped you, consider giving it a ⭐ on GitHub!
+
+</div>
