@@ -19,7 +19,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: process.env.FRONTEND_URL || 'http://localhost:5173', credentials: true }));
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
@@ -29,30 +32,53 @@ app.use(apiLimiter);
 // Swagger API Documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Health check
+// Root Route
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: '🚀 Welcome to the Petrol Pump Management System API',
+    version: '1.0.0',
+    author: 'M. Ahsan Idrees',
+    status: 'Online',
+    documentation: '/api-docs',
+    healthCheck: '/health',
+    apiBase: '/api',
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Health Check
 app.get('/health', (req, res) => {
-  res.json({ success: true, message: 'Petrol Pump API is running', timestamp: new Date() });
+  res.status(200).json({
+    success: true,
+    message: 'Petrol Pump API is running',
+    status: 'Healthy',
+    timestamp: new Date().toISOString()
+  });
 });
 
 // API Routes
 app.use('/api', routes);
 
-// Error handling
+// Error Handling
 app.use(notFound);
 app.use(errorHandler);
 
-// Start server
+// Start Server
 const startServer = async () => {
   try {
     await sequelize.authenticate();
     logger.info('MySQL database connected successfully');
 
-    await sequelize.sync({ alter: process.env.NODE_ENV === 'development' });
+    await sequelize.sync({
+      alter: process.env.NODE_ENV === 'development'
+    });
     logger.info('Database models synchronized');
 
     app.listen(PORT, () => {
-      logger.info(`Server running on http://localhost:${PORT}`);
-      logger.info(`Swagger docs: http://localhost:${PORT}/api-docs`);
+      logger.info(`🚀 Server running on http://localhost:${PORT}`);
+      logger.info(`📖 Swagger Docs: http://localhost:${PORT}/api-docs`);
+      logger.info(`❤️ Health Check: http://localhost:${PORT}/health`);
     });
   } catch (err) {
     logger.error('Failed to start server:', err.message);
