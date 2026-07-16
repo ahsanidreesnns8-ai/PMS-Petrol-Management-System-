@@ -8,7 +8,7 @@
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express&logoColor=white)](https://expressjs.com/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](#-license)
+
 
 [Overview](#-overview) •
 [Features](#-features) •
@@ -353,9 +353,13 @@ Contributions are welcome! To contribute:
 
 ---
 
-## 📄 License
+## 📄 Copyright & Usage
 
-This project is licensed under the **MIT License** — feel free to use, modify, and distribute it with attribution.
+© 2026 M. Ahsan Idrees. All Rights Reserved.
+
+This project and its source code are proprietary.
+
+No part of this software may be copied, modified, distributed, published, or used in any form without prior written permission from the author.
 
 ---
 
