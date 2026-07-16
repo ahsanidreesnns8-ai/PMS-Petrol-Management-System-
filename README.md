@@ -22,6 +22,17 @@
 
 ---
 
+## 🌐 Live Deployment
+
+| Service | Status | URL |
+|----------|--------|-----|
+| Backend API | ✅ Live | https://pms-petrol-management-system-production.up.railway.app |
+| Health Check | ✅ Live | https://pms-petrol-management-system-production.up.railway.app/health |
+| Swagger API Documentation | ✅ Live | https://pms-petrol-management-system-production.up.railway.app/api-docs |
+| Frontend | 🚧 Coming Soon | Deploying to Vercel |
+
+---
+
 ## 📖 Overview
 
 The **Petrol Pump Management System** is a complete web application for digitizing the day-to-day operations of a fuel station. It replaces manual registers with a secure, role-based dashboard that handles fuel stock, customer billing, staff records, and business reporting.
@@ -30,11 +41,16 @@ Built with a clean **MVC architecture** on the backend and a modern **React + Vi
 
 |                  |                                                              |
 |------------------|--------------------------------------------------------------|
-| **Frontend**     | React 18 + Vite, running on `http://localhost:5173`          |
-| **Backend**      | Node.js + Express (MVC), running on `http://localhost:5000`  |
-| **Database**     | MySQL                                                        |
-| **API Docs**     | Swagger UI at `http://localhost:5000/api-docs`               |
-| **Auth**         | JWT-based, with Admin and Staff roles                        |
+| Component | Details |
+|----------|---------|
+| Frontend | React 18 + Vite |
+| Backend | Node.js + Express (MVC) |
+| Database | MySQL |
+| Authentication | JWT |
+| ORM | Sequelize |
+| API Documentation | Swagger UI |
+| Backend Deployment | Railway |
+| Backend Status | ✅ Live |
 
 ---
 
@@ -73,6 +89,30 @@ Built with a clean **MVC architecture** on the backend and a modern **React + Vi
 - Profile management and password updates
 - Light/dark theme toggle
 - Business/station configuration options
+
+---
+
+---
+
+# 🚀 Deployment
+
+The backend API has been successfully deployed on **Railway**.
+
+### Production URLs
+
+**Backend API**
+
+https://pms-petrol-management-system-production.up.railway.app
+
+**Health Check**
+
+https://pms-petrol-management-system-production.up.railway.app/health
+
+**Swagger Documentation**
+
+https://pms-petrol-management-system-production.up.railway.app/api-docs
+
+The frontend is currently being prepared for deployment on **Vercel**.
 
 ---
 
@@ -195,8 +235,13 @@ npm run seed
 npm run dev
 ```
 
-✅ Backend running at: **http://localhost:5000**
-✅ Swagger API docs at: **http://localhost:5000/api-docs**
+### Local Development
+
+Backend:
+http://localhost:5000
+
+Production Backend:
+https://pms-petrol-management-system-production.up.railway.app
 
 #### Demo Login Credentials (after seeding)
 
@@ -283,11 +328,14 @@ A quick walkthrough script for demos, vivas, or evaluations:
 
 ## 🗺️ Roadmap
 
-- [ ] Multi-station / multi-branch support
-- [ ] SMS/email notifications for low stock
-- [ ] Role-based dashboard widgets
-- [ ] Export reports to PDF/Excel
-- [ ] Dockerized deployment setup
+- [x] Backend API Development
+- [x] JWT Authentication
+- [x] Swagger Documentation
+- [x] Railway Backend Deployment
+- [ ] Frontend Deployment (Vercel)
+- [ ] Custom Domain
+- [ ] Export Reports to PDF
+- [ ] Multi Branch Support
 
 *(Contributions and suggestions for this roadmap are welcome!)*
 
@@ -311,9 +359,16 @@ This project is licensed under the **MIT License** — feel free to use, modify,
 
 ---
 
-## 👤 Author
+## 👨‍💻 Author
 
 **M. Ahsan Idrees**
+
+Cybersecurity Undergraduate • Full Stack Developer
+
+### Connect with me
+
+- GitHub: https://github.com/ahsanidreesnns8-ai
+- LinkedIn: https://www.linkedin.com/in/m-ahsan-idrees-664126329
 
 <div align="center">
 
