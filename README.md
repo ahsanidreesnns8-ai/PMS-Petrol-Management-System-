@@ -38,9 +38,13 @@
 
 <img width="1920" height="1080" alt="Screenshot (989)" src="https://github.com/user-attachments/assets/de05fa80-20d4-4338-8804-8c8c1d357bca" />
 
+---
+
 ### 🧾 Billing & PDF Receipt
 
-![Billing Module](images/billing-module.png)
+<img width="1920" height="1080" alt="Screenshot (990)" src="https://github.com/user-attachments/assets/d61237f2-db9f-4fab-a74d-406396f7560a" />
+
+---
 
 ## 🌐 Live Demo
 
