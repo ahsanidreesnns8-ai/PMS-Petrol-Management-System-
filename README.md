@@ -22,6 +22,38 @@
 
 ---
 
+## 📊 Repository Information
+
+- Language: JavaScript
+- Frontend: React + Vite
+- Backend: Express.js
+- Database: MySQL
+- Deployment:
+  - Railway
+  - Vercel
+
+---
+
+### 📊 Dashboard
+
+<img width="1920" height="1080" alt="Screenshot (989)" src="https://github.com/user-attachments/assets/de05fa80-20d4-4338-8804-8c8c1d357bca" />
+
+### 🧾 Billing & PDF Receipt
+
+![Billing Module](images/billing-module.png)
+
+## 🌐 Live Demo
+
+🚀 **Frontend**
+https://pms-petrol-management-system.vercel.app
+
+📘 **Backend API**
+https://pms-petrol-management-system-production.up.railway.app
+
+📚 **Swagger Documentation**
+https://pms-petrol-management-system-production.up.railway.app/api-docs
+
+
 ## 🌐 Live Deployment
 
 | Service | Status | URL |
@@ -29,7 +61,7 @@
 | Backend API | ✅ Live | https://pms-petrol-management-system-production.up.railway.app |
 | Health Check | ✅ Live | https://pms-petrol-management-system-production.up.railway.app/health |
 | Swagger API Documentation | ✅ Live | https://pms-petrol-management-system-production.up.railway.app/api-docs |
-| Frontend | 🚧 Coming Soon | Deploying to Vercel |
+| Frontend | ✅ Live | https://pms-petrol-management-system.vercel.app |
 
 ---
 
@@ -51,6 +83,15 @@ Built with a clean **MVC architecture** on the backend and a modern **React + Vi
 | API Documentation | Swagger UI |
 | Backend Deployment | Railway |
 | Backend Status | ✅ Live |
+
+---
+
+## 🔑 Demo Credentials
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@petrolpump.com | admin123 |
+| Staff | staff@petrolpump.com | staff123 |
 
 ---
 
@@ -116,6 +157,19 @@ The frontend is currently being prepared for deployment on **Vercel**.
 
 ---
 
+React + Vite
+      │
+      ▼
+Express.js REST API
+      │
+      ▼
+Sequelize ORM
+      │
+      ▼
+MySQL Database
+
+---
+
 ## 🛠 Tech Stack
 
 <table>
@@ -176,6 +230,21 @@ petrol-pump-management-system/
 └── database/
     └── schema.sql            # MySQL schema and seed structure
 ```
+
+## 📈 Project Statistics
+
+- ✔ 20+ REST APIs
+- ✔ JWT Authentication
+- ✔ MVC Architecture
+- ✔ MySQL Database
+- ✔ Sequelize ORM
+- ✔ Swagger Documentation
+- ✔ Railway Deployment
+- ✔ Vercel Deployment
+- ✔ PDF Bill Generation
+- ✔ Vehicle History
+- ✔ Employee Management
+- ✔ Fuel Stock Management
 
 ---
 
@@ -328,14 +397,20 @@ A quick walkthrough script for demos, vivas, or evaluations:
 
 ## 🗺️ Roadmap
 
+## 🗺️ Roadmap
+
 - [x] Backend API Development
 - [x] JWT Authentication
 - [x] Swagger Documentation
 - [x] Railway Backend Deployment
-- [ ] Frontend Deployment (Vercel)
+- [x] Frontend Deployment (Vercel)
+- [x] PDF Bill Generation
+- [x] Export Reports to PDF
+- [x] Automatic Report Download
+- [x] Multi Branch Management
+- [ ] Docker Support
 - [ ] Custom Domain
-- [ ] Export Reports to PDF
-- [ ] Multi Branch Support
+- [ ] CI/CD Pipeline
 
 *(Contributions and suggestions for this roadmap are welcome!)*
 
@@ -353,13 +428,13 @@ Contributions are welcome! To contribute:
 
 ---
 
-## 📄 Copyright & Usage
+## ⚖️ License
+
+This repository is provided for viewing and educational purposes only.
+
+The source code may not be copied, modified, redistributed, or used in any commercial or personal project without the explicit written permission of the author.
 
 © 2026 M. Ahsan Idrees. All Rights Reserved.
-
-This project and its source code are proprietary.
-
-No part of this software may be copied, modified, distributed, published, or used in any form without prior written permission from the author.
 
 ---
 
@@ -374,6 +449,15 @@ Cybersecurity Undergraduate • Full Stack Developer
 - GitHub: https://github.com/ahsanidreesnns8-ai
 - LinkedIn: https://www.linkedin.com/in/m-ahsan-idrees-664126329
 
+---
+
+![Stars](https://img.shields.io/github/stars/ahsanidreesnns8-ai/PMS-Petrol-Management-System-?style=for-the-badge)
+
+![Issues](https://img.shields.io/github/issues/ahsanidreesnns8-ai/PMS-Petrol-Management-System-?style=for-the-badge)
+
+![Last Commit](https://img.shields.io/github/last-commit/ahsanidreesnns8-ai/PMS-Petrol-Management-System-?style=for-the-badge)
+
+---
 <div align="center">
 
 If this project helped you, consider giving it a ⭐ on GitHub!
