@@ -57,6 +57,7 @@ https://pms-petrol-management-system-production.up.railway.app
 📚 **Swagger Documentation**
 https://pms-petrol-management-system-production.up.railway.app/api-docs
 
+---
 
 ## 🌐 Live Deployment
 
@@ -134,8 +135,6 @@ Built with a clean **MVC architecture** on the backend and a modern **React + Vi
 - Profile management and password updates
 - Light/dark theme toggle
 - Business/station configuration options
-
----
 
 ---
 
@@ -401,8 +400,6 @@ A quick walkthrough script for demos, vivas, or evaluations:
 
 ## 🗺️ Roadmap
 
-## 🗺️ Roadmap
-
 - [x] Backend API Development
 - [x] JWT Authentication
 - [x] Swagger Documentation
@@ -453,15 +450,6 @@ Cybersecurity Undergraduate • Full Stack Developer
 - GitHub: https://github.com/ahsanidreesnns8-ai
 - LinkedIn: https://www.linkedin.com/in/m-ahsan-idrees-664126329
 
----
-
-![Stars](https://img.shields.io/github/stars/ahsanidreesnns8-ai/PMS-Petrol-Management-System-?style=for-the-badge)
-
-![Issues](https://img.shields.io/github/issues/ahsanidreesnns8-ai/PMS-Petrol-Management-System-?style=for-the-badge)
-
-![Last Commit](https://img.shields.io/github/last-commit/ahsanidreesnns8-ai/PMS-Petrol-Management-System-?style=for-the-badge)
-
----
 <div align="center">
 
 If this project helped you, consider giving it a ⭐ on GitHub!
