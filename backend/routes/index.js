@@ -12,6 +12,7 @@ const branchRoutes = require('./branch.routes');
 router.use('/auth', authRoutes);
 router.use('/branches', branchRoutes);
 router.use('/users', settingsRoutes);   // keep this for user-specific settings
+router.use('/settings', settingsRoutes); // restore for frontend theme/profile calls
 router.use('/fuels', fuelRoutes);
 router.use('/billing', billingRoutes);
 router.use('/employees', employeeRoutes);
