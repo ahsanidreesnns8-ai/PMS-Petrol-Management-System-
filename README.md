@@ -156,7 +156,9 @@ https://pms-petrol-management-system-production.up.railway.app/health
 
 https://pms-petrol-management-system-production.up.railway.app/api-docs
 
-The frontend is currently being prepared for deployment on **Vercel**.
+**Frontend**
+
+https://pms-petrol-management-system.vercel.app
 
 ---
 
